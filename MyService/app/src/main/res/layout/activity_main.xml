@@ -19,5 +19,19 @@
         android:text="stopService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/stopService"
+        android:id="@+id/bindService"
+        android:text="bindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/bindService"
+        android:id="@+id/unbindService"
+        android:text="unbindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

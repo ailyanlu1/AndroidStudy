@@ -2,10 +2,19 @@ package com.example.deronhuang.myservice;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
 import android.util.Log;
 
+import java.io.FileDescriptor;
+
 public class MyService extends Service {
+
+    private MyBinder mBinder = new MyBinder();
+
     public MyService() {
 
     }
@@ -30,7 +39,18 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return mBinder;
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.i("Service","onUnbind");
+        return super.onUnbind(intent);
+    }
+
+    class MyBinder extends Binder {
+        public void service_connect_activity(){
+            Log.i("MyBinder","Service关联了Activity,并在Activity执行了Service的方法");
+        }
     }
 }
