@@ -10,25 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true">
-        </service>
-        <service android:name=".AIDLService"
-            android:process=":remote"
+            android:exported="true"></service>
+        <service
+            android:name=".AIDLService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:process=":remote">
             <intent-filter>
-                <action android:name="com.example.deronhuang.myservice.aidl"/>
+                <action android:name="com.example.deronhuang.myservice.aidl" />
             </intent-filter>
         </service>
+
+        <activity android:name=".AIDLActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

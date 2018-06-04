@@ -1,5 +1,7 @@
 package com.example.deronhuang.myservice;
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
@@ -23,6 +25,18 @@ public class MyService extends Service {
     public void onCreate() {
         Log.i("Service","Service onCreate.");
         super.onCreate();
+
+        Intent notifyIntent = new Intent(this,MainActivity.class);
+        PendingIntent pIntent = PendingIntent.getActivity(this,0,notifyIntent,0);
+
+        Notification.Builder builder  = new Notification.Builder(this);
+        builder.setContentTitle("前台服务通知标题");
+        builder.setContentText("前台服务通知内容");
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentIntent(pIntent);
+
+        Notification notification = builder.build();
+        startForeground(1,notification);
     }
 
     @Override
