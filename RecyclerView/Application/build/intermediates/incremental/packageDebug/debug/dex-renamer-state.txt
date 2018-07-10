@@ -1,0 +1,4 @@
+#Tue Jul 10 20:34:05 CST 2018
+base.0=/Users/deronhuang/Desktop/AndroidStudy/RecyclerView/Application/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
