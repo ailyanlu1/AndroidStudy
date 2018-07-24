@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp">
+
+    <android.support.design.widget.TabLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tabL">
+
+        <android.support.design.widget.TabItem
+            android:text="Stores"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/stores"/>
+
+        <android.support.design.widget.TabItem
+            android:text="Coupons"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/coupons"/>
+
+        <android.support.design.widget.TabItem
+            android:text="Cashback"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/cashback"/>
+
+    </android.support.design.widget.TabLayout>
+
+</RelativeLayout>
